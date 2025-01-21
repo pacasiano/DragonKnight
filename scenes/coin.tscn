@@ -1,0 +1,217 @@
+[gd_scene load_steps=21 format=3 uid="uid://hs3ftm5cslyp"]
+
+[ext_resource type="Texture2D" uid="uid://bm32huqvo3svm" path="res://assets/sprites/coin.png" id="1_211t5"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_pl3kk"]
+[ext_resource type="AudioStream" uid="uid://cchdhg6r6u0kn" path="res://assets/sounds/coin.wav" id="3_upwm2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lm5ko"]
+atlas = ExtResource("1_211t5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdvex"]
+atlas = ExtResource("1_211t5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smkjd"]
+atlas = ExtResource("1_211t5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ti8e"]
+atlas = ExtResource("1_211t5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh3fx"]
+atlas = ExtResource("1_211t5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8n12"]
+atlas = ExtResource("1_211t5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoj00"]
+atlas = ExtResource("1_211t5")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mlbf"]
+atlas = ExtResource("1_211t5")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb6oy"]
+atlas = ExtResource("1_211t5")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdw2g"]
+atlas = ExtResource("1_211t5")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qkqn"]
+atlas = ExtResource("1_211t5")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx6yq"]
+atlas = ExtResource("1_211t5")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b8o7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lm5ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdvex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smkjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ti8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh3fx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8n12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoj00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mlbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb6oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdw2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qkqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nx6yq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqy3r"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_rj0rg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bwckt"]
+resource_name = "pickup"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1.07177),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -13)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 14.9285),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b0p4i"]
+_data = {
+"RESET": SubResource("Animation_rj0rg"),
+"pickup": SubResource("Animation_bwckt")
+}
+
+[node name="coin" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+audio_bus_name = &"Sfx"
+script = ExtResource("1_pl3kk")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b8o7w")
+autoplay = "default"
+frame = 4
+frame_progress = 0.78792
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sqy3r")
+
+[node name="coinsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_upwm2")
+bus = &"Sfx"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b0p4i")
+}
+autoplay = "RESET"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

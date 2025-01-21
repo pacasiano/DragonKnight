@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://buwa1n2c0bgqb"]
+
+[ext_resource type="Texture2D" uid="uid://dv7mneehk0ofc" path="res://assets/sprites/world_tileset.png" id="1_redg6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekniu"]
+size = Vector2(16, 16)
+
+[node name="crate" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_redg6")
+region_enabled = true
+region_rect = Rect2(112, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ekniu")
