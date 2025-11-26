@@ -1,6 +1,6 @@
 # DragonKnight
 
-A simple 2D game made for fun using Godot and C0 assets. Developed from 4 AM to 11 AM — it’s not finished yet, but it’s a good start!
+A simple 2D game made for fun using Godot and C0 assets. Developed from 4 AM to 11 AM — it’s not finished yet (like really now finished at all), but it’s a good start!
 
 ## How to Play
 - **A-D**: Move
